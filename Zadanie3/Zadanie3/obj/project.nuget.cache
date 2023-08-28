@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BM4n0AzgwAbEAoTyOCA+u3NV8v/xRqSbHNFt/8/8W17nLHQsw0tAdSHVvV025FbIcCqfly20N+fr4yI1v8RjDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Adam\\Desktop\\studia\\do pracy\\Zadania z Praktyk\\Zadanie3\\Zadanie3\\Zadanie3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Adam\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
