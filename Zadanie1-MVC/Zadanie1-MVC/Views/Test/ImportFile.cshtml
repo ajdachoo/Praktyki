@@ -1,0 +1,19 @@
+﻿@model ImportFileForm
+
+<div class="text-center">
+    <h1 class="display-4">Import z pliku</h1>
+</div>
+<div class="container">
+    <div class="mb-3 mt-3">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="FormFile" class="form-label">Załaduj plik</label>
+                <input asp-for="FormFile" name="FormFile" type="file" class="form-control" accept=".csv, .xlsx" />
+                <span asp-validation-for="FormFile" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" style="width:150px">Załaduj</button>
+            </div>
+        </form>
+    </div>
+</div>

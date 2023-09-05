@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Klient>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Lista klientów</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Test" asp-action="ImportFile" class="btn btn-secondary">Importuj z pliku</a>
+            <a asp-controller="Test" asp-action="SaveClientsToCsv" class="btn btn-secondary">Eksportuj do .csv</a>
+            <a asp-controller="Test" asp-action="SaveClientsToXlsx" class="btn btn-secondary">Eksportuj do .xlsx</a>
+            <a asp-controller="Test" asp-action="Create" class="btn btn-success">Dodaj klienta</a>
+        </div>
+    </div>
+    <br /><br />
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>PESEL</th>
+            <th>BirthYear</th>
+            <th>Płeć</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.Name</td>
+                <td>@obj.Surname</td>
+                <td>@obj.Pesel</td>
+                <td>@obj.BirthYear</td>
+                <td>@(obj.Płeć == 1 ? "M" : "K")</td>
+                <td>
+                        <a asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
